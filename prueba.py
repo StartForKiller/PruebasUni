@@ -1,4 +1,6 @@
 print("Hello world")
 
 file = open('prueba.txt', 'r')
-print(file.readline())
+lines = file.readlines()
+for index in range(0, len(lines)):
+    print(lines[index], end='')
