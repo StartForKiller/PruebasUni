@@ -8,7 +8,7 @@ if bisiesto:
 else:
     print("El año {} no es bisiesto".format(anno))
 
-if mes == 1: # Febrero
+if mes == 2: # Febrero
     print("El mes {} tiene {} días".format(mes, 29 if bisiesto else 28))
 else:
-    print("El mes {} tiene {} días".format(mes, 31 if mes % 2 == 0 else 30))
+    print("El mes {} tiene {} días".format(mes, 31 if mes % 2 == 1 else 30))
