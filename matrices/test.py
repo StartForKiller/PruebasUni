@@ -10,10 +10,17 @@ def printMatrix(matrix):
             print(matrix[i][j], end=' ')
         print("")
 
-def createIdentity(n,m):
-    matrix = createMatrix(n, m)
-    for i in range(min(n, m)):
+def createIdentity(n):
+    matrix = createMatrix(n, n)
+    for i in range(n):
         matrix[i][i] = 1
     return matrix
 
-printMatrix(createIdentity(4,4))
+def sumMatrixInternal(matrix):
+    sum = 0
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            sum += matrix[i][j]
+    return sum
+
+printMatrix(createIdentity(4))
